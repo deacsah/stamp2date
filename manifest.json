@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "Stamp2date",
+    "version": "2.0",
+
+    "description": "Convert a unix timestamp to a datetime in phpmyadmin by hovering over a table cell containing the timestamp",
+
+    "icons": {
+        "48": "icons/stamp2date-48.png"
+    },
+
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["*://*/*"],
+            "js": [
+                "js/jquery-3.2.1.min.js",
+                "js/stamp2date.js"
+            ]
+        }
+    ]
+
+}

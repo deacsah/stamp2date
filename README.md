@@ -1,6 +1,7 @@
-stamp2date
-==========
+#stamp2date 2.0
 
-a firefox add-on that converts timestamp to date/datetime, simply by hovering over the timestamp with your mouse. 
+A firefox web extension that converts Unix timestamps to datetime, simply by hovering over the timestamp with your mouse and pressing SHIFT. 
 
-at this point it only works with html table cells that contain timestamps, like in phpmyadmin (what i primarily built it for).
+Was built for converting timestamps to dates in phpmyadmin tables.
+
+Works for Firefox version 45 or later.
