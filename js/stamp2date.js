@@ -1,11 +1,13 @@
 var target;
 var old;
-$('.table_results td.data').on("mouseover",function() {
+$('td').on("mouseover",function() {
+	console.log('mouseover');
+	old = '';
 	target = $(this);
-	old = target.text();
-    $(document).bind("keydown",function(e) {
-        if(e.shiftKey) {
-			if (isInt(old)) {
+	if (isInt(target.text())) {
+		old = target.text();
+	    $(document).bind("keydown",function(e) {
+	        if(e.shiftKey) {
 				timestamp = old*1000; // seconds * 1000 for milliseconds
 				if (isValid(timestamp)) {
 					// var zone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2];
@@ -33,15 +35,14 @@ $('.table_results td.data').on("mouseover",function() {
 				} else {
 					result = 'Invalid timestamp';
 				}
-			} else {
-				result = 'Invalid timestamp';
-			}
-			target.html(result);	
-        }
-    });
+				target.html(result);	
+	        }
+	    });
+	} 
 }).on("mouseout",function()
 {
-    $(document).unbind("keydown");
+	console.log('mouseout');
+    // $(document).unbind("keydown");
     if (old) {
 		target.html(old);		    	
     }
