@@ -1,10 +1,9 @@
 var target;
 var old;
 $('td').on("mouseover",function() {
-	console.log('mouseover');
 	old = '';
 	target = $(this);
-	if (isInt(target.text())) {
+	if (isInt(target.text()) && target.text().length == 10) {
 		old = target.text();
 	    $(document).bind("keydown",function(e) {
 	        if(e.shiftKey) {
@@ -41,7 +40,6 @@ $('td').on("mouseover",function() {
 	} 
 }).on("mouseout",function()
 {
-	console.log('mouseout');
     // $(document).unbind("keydown");
     if (old) {
 		target.html(old);		    	
