@@ -1,4 +1,4 @@
-#stamp2date 2.0
+# stamp2date 2.0
 
 A firefox web extension that converts Unix timestamps to datetime, simply by hovering over the timestamp with your mouse and pressing SHIFT. 
 
